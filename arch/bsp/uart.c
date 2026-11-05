@@ -1,10 +1,12 @@
 #include <arch/bsp/uart.h>
 #include <stddef.h>
 
-static constexpr unsigned int UART_BASE		= 0x7E201000 - 0x3F000000;
+static constexpr unsigned int UART_BASE	= 0x7E201000 - 0x3F000000;
 static constexpr unsigned int UART_DR_DATA_MASK = 0xFFu;
 static constexpr unsigned int UART_FR_RXFE	= 1u << 4;
 static constexpr unsigned int UART_FR_TXFF	= 1u << 5;
+
+
 
 struct uart {
 	unsigned int dr;
